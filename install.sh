@@ -8,7 +8,6 @@ if [ -z "${VENV_PATH}" ]; then
 fi
 
 # INSTALL APT-PACKAGES
-echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
 apt-get update
 apt-get -qqy install --no-install-recommends apt-utils > /dev/null 2>&1
 apt-get -qqy install --no-install-recommends python3-simplejson python3-pip python3-venv
